@@ -17,8 +17,11 @@ let posts = [
     username: "Here come your name",
     content: "Here comes your content",
   },
-  
 ];
+
+app.get("/", (req, res) => {
+  res.redirect("/posts");
+});
 
 app.get("/posts", (req, res) => {
   res.render("home.ejs", { posts });
